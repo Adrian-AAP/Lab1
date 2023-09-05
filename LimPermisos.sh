@@ -20,8 +20,7 @@ fi
 if [ $(getent group $2) ]; then
 	echo "Ya existe un grupo con este nombre"
 else
-	#sudo groupadd $2
-	echo "A"
+	sudo groupadd $2
 fi
 
 sudo usermod -aG $2 vmub 		#Asignar usuario default al grupo
